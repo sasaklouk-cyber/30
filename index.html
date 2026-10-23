@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Motion Lab — лаборатория анимации</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <h1 class="app__title">Motion Lab</h1>
+        <p class="app__description">
+          Управляйте движением объекта с помощью JavaScript.
+        </p>
+      </header>
+
+      <section class="lab" aria-labelledby="lab-title">
+        <div class="lab__heading">
+          <h2 id="lab-title">Площадка для анимации</h2>
+        </div>
+
+        <div class="stage" aria-label="Площадка с анимируемой ракетой">
+          <div class="stage__track" aria-hidden="true"></div>
+          <div class="rocket" id="rocket">
+            <span class="rocket__icon" id="rocket-icon" aria-hidden="true"
+              >🚀</span
+            >
+          </div>
+          <span class="stage__start">СТАРТ</span>
+          <span class="stage__finish">ФИНИШ</span>
+        </div>
+
+        <div class="controls" aria-label="Управление анимацией">
+          <button class="button button--primary" type="button" id="move-button">
+            Переместить
+          </button>
+          <button class="button" type="button" id="color-button">
+            Сменить цвет
+          </button>
+          <button class="button" type="button" id="jump-button">
+            Подпрыгнуть
+          </button>
+          <button class="button button--reset" type="button" id="reset-button">
+            Сбросить
+          </button>
+        </div>
+
+        <p class="status" id="status" role="status" aria-live="polite">
+          Выберите действие.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
